@@ -1,0 +1,455 @@
+/* Existing CSS styles */
+
+body {
+  background-color: #ffe5ec;
+  font-family: 'Arial', sans-serif;
+}
+
+.candle-count-display {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f0e4d0;
+  background-color: #ff8fab;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #ffc2d1;
+}
+
+.candle-count-display span {
+  font-weight: bold;
+  color: #AD030F;
+}
+
+.cake {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plate {
+  width: 270px;
+  height: 110px;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cake > * {
+  position: absolute;
+}
+
+.layer {
+  width: 250px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ebe469;
+  box-shadow: 0 2px 0px #ebe469, 0 4px 0px #ebe469, 0 6px 0px #fffec2, 0 8px 0px #fffec2, 0 10px 0px #fffec2, 0 12px 0px #fffec2, 0 14px 0px #fffec2, 0 16px 0px #fffec2, 0 18px 0px #fffec2, 0 20px 0px #fffec2, 0 22px 0px #fffec2, 0 24px 0px #fffec2, 0 26px 0px #fffec2, 0 28px 0px #fffec2, 0 30px 0px #fffec2;
+}
+
+.layer-top {
+  top: 0px;
+}
+
+.layer-middle {
+  top: 33px;
+}
+
+.layer-bottom {
+  top: 66px;
+}
+
+.icing {
+  top: 2px;
+  left: 5px;
+  background-color: #ebe469;
+  width: 240px;
+  height: 90px;
+  border-radius: 50%;
+}
+.icing:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  bottom: 6px;
+  left: 5px;
+  background-color: #ebe469;
+  box-shadow: 0 0 4px #ebe469, 0 0 4px #ebe469, 0 0 4px #ebe469;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.drip {
+  display: block;
+  width: 50px;
+  height: 60px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #ebe469;
+}
+
+.drip1 {
+  top: 53px;
+  left: 5px;
+  transform: skewY(15deg);
+  height: 48px;
+  width: 40px;
+}
+
+.drip2 {
+  top: 69px;
+  left: 181px;
+  transform: skewY(-15deg);
+}
+
+.drip3 {
+  top: 54px;
+  left: 90px;
+  width: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.candle {
+  background-color: #7B020B;
+  width: 12px;
+  height: 35px;
+  border-radius: 6px/3px;
+  top: -20px;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 10;
+}
+.candle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ad030f;
+}
+
+.candle.out .flame {
+  display: none;
+}
+
+.flame {
+  position: absolute;
+  background-color: orange;
+  width: 10px;
+  height: 25px;
+  border-radius: 8px 8px 8px 8px/20px 20px 8px 8px;
+  top: -34px;
+  left: 50%;
+  margin-left: -7.5px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  transform-origin: 50% 90%;
+  animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
+  }
+  25% {
+    transform: skewX(-5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+  50% {
+    transform: skewX(10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
+  }
+  75% {
+    transform: skewX(-10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
+  }
+  100% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  color: #fb6f92;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  animation: blink 1s linear infinite;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Sprinkle styles */
+.sprinkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Pink sprinkle */
+.sprinkle.pink {
+  background-color: #ff7eb9;
+}
+
+/* Blue sprinkle */
+.sprinkle.blue {
+  background-color: #8cc5ff;
+}
+
+/* Purple sprinkle */
+.sprinkle.purple {
+  background-color: #d18cff;
+}
+
+.birthdayAge {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 24px;
+  text-align: center;
+  color: #f0e4d0;
+  background-color: #ff8fab;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  margin: 20px auto; /* Centers the element horizontally */
+  border: 2px solid #ffc2d1;
+  position: relative; /* Required for centering vertically */
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Typewriter effect animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking cursor animation */
+@keyframes blinkCursor {
+  from { border-right-color: rgba(255, 255, 255, 0.75); }
+  to { border-right-color: transparent; }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden; /* Ensures the text stays within the element */
+  border-right: 0.15em solid rgba(255, 255, 255, 0.75); /* Cursor */
+  white-space: nowrap; /* Prevents text from wrapping */
+  animation: typing 4s steps(30, end), blinkCursor 0.75s step-end infinite;
+}
+
+.container {
+  display: none;
+  position: absolute;
+  top: calc(10% + 120px); /* Adjust this value based on your layout */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.valentines {
+  position: relative;
+  top: 50px;
+  cursor: pointer;
+  animation: up 3s linear infinite;
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #f08080;
+  display: grid;
+  place-items: center;
+}
+
+.envelope::before {
+  content: '';
+  position: absolute;
+  width: 212px;
+  height: 212px;
+  background: #f08080;
+  transform: rotate(45deg);
+  top: -105px;
+  left: 44px;
+  border-radius: 30px 0 0 0;
+}
+
+.front {
+  position: absolute;
+  border-right: 180px solid #f4978e;
+  border-top: 95px solid transparent;
+  border-bottom: 100px solid transparent;
+  left: 120px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  z-index: 10;
+}
+
+.front::before {
+  position: absolute;
+  content: '';
+  border-left: 300px solid #fda996;
+  border-top: 195px solid transparent;
+  left: -120px;
+  top: -95px;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 180px;
+  background: #fff;
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  transition: 1s;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid #003049;
+  border-style: dashed;
+}
+
+.valentines:hover .card {
+  transform: translateY(-100px);
+}
+
+.card .text {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+  color: #003049;
+}
+
+.card .heart {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: red;
+  bottom: 15px;
+  transform: rotate(45deg);
+  border-radius: 50% 0 0 50%;
+}
+
+.card .heart::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  border-radius: 0 50% 50% 0;
+  right: 0;
+  transform: rotate(-90deg);
+  transform-origin: top;
+}
+
+.card .heart::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  right: -18px;
+}
+
+@keyframes up {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+.valentines::before {
+  content: '';
+  position: absolute;
+  width: 330px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .3);
+  top: 265px;
+  left: -15px;
+  animation: scale 3s linear infinite;
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(.85);
+  }
+}
+
+/* New styles for cream buttons */
+
+.cream-buttons {
+  position: absolute;
+  bottom: 80px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.cream-button {
+  background-color: #f08080;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cream-button:hover {
+  background-color: #d85568;
+}
